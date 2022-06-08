@@ -1,3 +1,6 @@
+import { useState } from "react";
+import Button from "../components/Button";
+import Formulario from "../components/Formulario";
 import Layout from "../components/Layout";
 import Tabela from  '../components/Tabela';
 import Cliente from "../core/Cliente";
@@ -20,6 +23,8 @@ export default function Home() {
     
   }
 
+  const [visivel,setVisivel] = useState<'tabela'| 'form'>()
+
   return (
     <div className={`
       flex h-screen justify-center items-center
@@ -27,10 +32,16 @@ export default function Home() {
       text-white`
     }>
       <Layout titulo="Cadastro Simples">
-        <Tabela clientes={clientes}
+      
+      <div className="flex justify-end">  
+        <Button cor="green" className={`mb-4`}>Novo Cliente</Button>
+      </div>
+        {/*<Tabela clientes={clientes}
           clienteExcluido={clienteExcluido}
-          clienteSelecionado={clienteSelecionado}></Tabela>
+          clienteSelecionado={clienteSelecionado}></Tabela>*/ }
+        <Formulario cliente={clientes[0]}/>
       </Layout>
+
     </div>
   )
 }
