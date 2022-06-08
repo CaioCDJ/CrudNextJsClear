@@ -1,3 +1,4 @@
+import Layout from "../components/Layout.tsx";
 
 export default function Home() {
   return (
@@ -5,9 +6,11 @@ export default function Home() {
     <div className={`
       flex h-screen justify-center items-center
       bg-gradient-to-r from-purple-500 to-blue-600  
-      `
+      text-white`
     }>
-      <span className={`text-4xl`}> texto</span>
+      <Layout titulo="Cadastro Simples">
+        <span>Conteudo</span>
+      </Layout>
     </div>
   )
 }
