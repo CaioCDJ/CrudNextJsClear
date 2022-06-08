@@ -1,7 +1,7 @@
 
 
 export default function Titulo(props){
-
+    
     return(
         <div className={`
         flex flex-col justify-center`}>

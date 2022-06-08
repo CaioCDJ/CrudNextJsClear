@@ -1,4 +1,4 @@
-import Titulo from "./Titulo.tsx"
+import Titulo from "./Titulo"
 
 
 interface LayoutProps{
