@@ -29,7 +29,7 @@ export default function Tabela(props:TabelaProps){
                 {props.clienteSelecionado ? (
                     <button className={`flex justify-center 
                         items-center rounded-full 
-                        text-green-600 hover:bg-purple-50 
+                        text-green-600 hover:bg-purple-900 
                         p-2 m-1`}
                         onClick={()=> props.clienteSelecionado?.(cliente)}>{IcondeEdicao}</button>
                 ) : false}
@@ -37,7 +37,7 @@ export default function Tabela(props:TabelaProps){
                     <button className={`
                         flex justify-center items-center 
                         rounded-full text-red-600 
-                        hover:bg-purple-50 
+                        hover:bg-purple-900 
                         p-2 m-1`}
                         onClick={()=>props.clienteExcluido?.(cliente)}>{IconeLixo}</button>
                 ): false}
@@ -51,10 +51,10 @@ export default function Tabela(props:TabelaProps){
         return props.clientes?.map((cliente,i)=>{
             return(
                 <tr key={cliente.id}
-                    className={`${i % 2 == 0 ? 'bg-purple-200' : 'bg-purple-100'}`}>
-                    <td className={`text-left p-4`}>{cliente.id}</td>
-                    <td className={`text-left p-4`}>{cliente.nome}</td>
-                    <td className={`text-left p-4`}>{cliente.idade}</td>
+                    className={`${i % 2 == 0 ? 'bg-stone-700' : 'bg-stone-700'}`}>
+                    <td className={`text-left p-4 text-white`}>{cliente.id}</td>
+                    <td className={`text-left p-4 text-white`}>{cliente.nome}</td>
+                    <td className={`text-left p-4 text-white`}>{cliente.idade}</td>
                     {exibirAcoes ? renderizarAcoes(cliente):false}
 
                 </tr>
