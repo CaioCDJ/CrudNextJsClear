@@ -7,7 +7,7 @@ Este projeto segue o curso de react <a href="https://www.udemy.com/course/react-
 
 ## Para rodar a aplicação
 
- - Criar um firestore database no site<a>firebase</a>
+ - Criar um firestore database no site <a href="https://firebase.google.com/">firebase</a>
 
 Depois de criar um banco de dados, crie um arquivo com o nome .env.local. Apos isso coloques as informações do banco comforme o modelo abaixo
 
